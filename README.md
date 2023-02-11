@@ -6,6 +6,8 @@ Go to
 
 - about:support
 
-and look for profile folder, click on it and then create a directory - "chrome".
+and look for profile folder, click on it and then create a directory
 
-Once you done that, add the userChrome.css and userContent.css, close your current Firefox Session and enjoy
+- "chrome"
+
+Once you done that, add the userChrome.css and userContent.css into chrome folder, close your current Firefox Session and enjoy.
