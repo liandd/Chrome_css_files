@@ -1,4 +1,5 @@
-# chrome-css-files Author: dpcdpc11.gumroad.com
+# chrome-css-files 
+Author: dpcdpc11.gumroad.com
 Applying some css to Firefox to give it a new vibe
 
 ### About
