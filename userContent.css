@@ -1,21 +1,19 @@
 /*================ GLOBAL COLORS ================*/
 :root {
-	--accent-color: 255, 165, 138;
-	--secondary-accent-color: 214, 233, 250;
+	--accent-color: 214, 233, 250;
+	--secondary-accent-color: 255, 165, 138;
 	--light-color: 255, 255, 255;
-	--dark-color: 92, 80, 75;
+	--dark-color: 70, 82, 93;
 }
 
 /*================ LIGHT THEME ================*/
 :root {
-	--main-bgcolor: var(--light-color);
+	--main-bgcolor: var(--dark-color);
 	--transparent-bgcolor: var(--dark-color);
 }
 
 /*================ DARK THEME ================*/
-:root:-moz-lwtheme-brighttext,
-.sidebar-panel[lwt-sidebar-brighttext],
-body[lwt-sidebar-brighttext] {
+:root:-moz-lwtheme-brighttext {
 	--main-bgcolor: var(--dark-color);
 	--transparent-bgcolor: var(--dark-color);
 }
@@ -64,13 +62,13 @@ body[lwt-sidebar-brighttext] {
 }
 .contentSearchSuggestionTable .contentSearchSuggestionRow.selected,
 .contentSearchSuggestionTable .contentSearchOneOffItem.selected {
-	background-color: rgba(var(--accent-color), 0.6) !important;
+	background-color: rgba(var(--accent-color), 0.3) !important;
 }
 
 .contentSearchSuggestionTable .contentSearchHeader,
 .contentSearchSuggestionTable .contentSearchSettingsButton,
 .contentSearchSuggestionTable .contentSearchOneOffsTable {
-	border-color: rgba(var(--accent-color), 0.6) !important;
+	border-color: rgba(var(--accent-color), 0.3) !important;
 }
 
 .contentSearchSuggestionTable {

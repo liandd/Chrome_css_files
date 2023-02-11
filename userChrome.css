@@ -1,22 +1,24 @@
+/*================== Simplify Silver for Firefox ==================
+Author: dpcdpc11.gumroad.com
+ENJOY!
+*/
 
 /*================ GLOBAL COLORS ================*/
 :root {
-	--accent-color: 255, 165, 138;
-	--secondary-accent-color: 214, 233, 250;
+	--accent-color: 214, 233, 250;
+	--secondary-accent-color: 255, 165, 138;
 	--light-color: 255, 255, 255;
-	--dark-color: 92, 80, 75;
+	--dark-color: 70, 82, 93;
 }
 
 /*================ LIGHT THEME ================*/
 :root {
-	--main-bgcolor: var(--light-color);
+	--main-bgcolor: var(--dark-color);
 	--transparent-bgcolor: var(--dark-color);
 }
 
 /*================ DARK THEME ================*/
-:root:-moz-lwtheme-brighttext,
-.sidebar-panel[lwt-sidebar-brighttext],
-body[lwt-sidebar-brighttext] {
+:root:-moz-lwtheme-brighttext {
 	--main-bgcolor: var(--dark-color);
 	--transparent-bgcolor: var(--dark-color);
 }
@@ -125,20 +127,18 @@ toolbarbutton.bookmark-item .toolbarbutton-icon {
 	transition: all 0.3s ease !important;
 	list-style-image: none;
 	border-radius: 10px;
-	background: rgba(var(--light-color), 1);
+	background: rgba(var(--main-bgcolor), 1);
 }
 .titlebar-button:hover > .toolbarbutton-icon {
 	background: rgba(var(--secondary-accent-color), 1); !important;
 }
 .titlebar-button.titlebar-min > .toolbarbutton-icon,
 .titlebar-button.titlebar-max > .toolbarbutton-icon,
-.titlebar-button.titlebar-restore > .toolbarbutton-icon,
 .titlebar-button.titlebar-close > .toolbarbutton-icon {
     
 }
 .titlebar-button.titlebar-min:hover > .toolbarbutton-icon,
 .titlebar-button.titlebar-max:hover > .toolbarbutton-icon,
-.titlebar-button.titlebar-restore:hover > .toolbarbutton-icon,
 .titlebar-button.titlebar-close:hover > .toolbarbutton-icon {
 	
 }
@@ -177,6 +177,7 @@ toolbar#nav-bar toolbarbutton #fxa-avatar-image {
 #urlbar:not([focused="true"]) > #urlbar-background,
 #urlbar > #urlbar-input-container {
 	border-radius: 40px !important;
+	color: rgba(var(--accent-color), 1) !important;
 }
 #PersonalToolbar .toolbarbutton-1:not([disabled="true"]):not([checked]):not([open]):not(:active):hover, .tabbrowser-arrowscrollbox:not([scrolledtostart="true"])::part(scrollbutton-up):hover, .tabbrowser-arrowscrollbox:not([scrolledtoend="true"])::part(scrollbutton-down):hover, .findbar-button:not(:-moz-any([checked="true"], [disabled="true"])):hover, toolbarbutton.bookmark-item:not(.subviewbutton):hover:not([disabled="true"]):not([open]), toolbar .toolbarbutton-1:not([disabled="true"]):not([checked]):not([open]):not(:active):hover > .toolbarbutton-icon, toolbar .toolbarbutton-1:not([disabled="true"]):not([checked]):not([open]):not(:active):hover > .toolbarbutton-text, toolbar .toolbarbutton-1:not([disabled="true"]):not([checked]):not([open]):not(:active):hover > .toolbarbutton-badge-stack {
 	background-color: rgba(var(--transparent-bgcolor), 0.2) !important;
@@ -190,6 +191,9 @@ toolbar#nav-bar toolbarbutton #fxa-avatar-image {
 	background-color: transparent !important;
 }
 
+#urlbar {
+	color: rgba(var(--light-color), 1) !important;
+}
 .urlbarView-url {
     color: rgba(var(--accent-color), 1) !important;
 }
@@ -203,6 +207,7 @@ searchbar#searchbar {
 	fill: rgba(var(--accent-color), 1) !important;
 	background-color: rgba(var(--main-bgcolor), 1) !important;
 	box-shadow: none !important;
+	color: rgba(var(--accent-color), 1) !important;
 }
 
 
@@ -211,6 +216,7 @@ searchbar#searchbar {
 .sidebar-panel[lwt-sidebar-brighttext] {
 	background-color: rgba(var(--main-bgcolor), 1) !important;
 }
+
 #sidebar-header {
 	border-color: rgba(var(--accent-color), 0.3) !important;
 }
@@ -237,6 +243,13 @@ searchbar#searchbar {
 	background-color: rgba(var(--main-bgcolor), 1) !important;
 	color: unset !important;
 }
+
 #viewButton {
 	color: unset !important;
+}
+
+#sidebar-box:not([lwt-sidebar]),
+.sidebar-panel:not([lwt-sidebar-brighttext]),
+body:not([lwt-sidebar-brighttext]) .content-container {
+	background-color: rgba(var(--light-color), 1) !important;
 }
